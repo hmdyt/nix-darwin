@@ -18,7 +18,13 @@
 
   homebrew = {
     enable = true;
-    casks = [ "ghostty" "google-chrome" ];
+    casks = [ "ghostty" "google-chrome" "raycast" ];
+  };
+
+  system.defaults.finder = {
+    AppleShowAllExtensions = true;
+    ShowPathbar = true;
+    FXEnableExtensionChangeWarning = false;
   };
 
   system.defaults.dock = {
