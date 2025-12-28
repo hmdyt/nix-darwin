@@ -6,21 +6,13 @@
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-
-    mac-app-util.url = "github:hraban/mac-app-util";
   };
 
-  outputs = { self, nix-darwin, nixpkgs, home-manager, mac-app-util }: {
+  outputs = { self, nix-darwin, nixpkgs, home-manager }: {
     darwinConfigurations."YutonoMacBook-Air" = nix-darwin.lib.darwinSystem {
       modules = [
         ./configuration.nix
-        mac-app-util.darwinModules.default
         home-manager.darwinModules.home-manager
-        {
-          home-manager.sharedModules = [
-            mac-app-util.homeManagerModules.default
-          ];
-        }
       ];
     };
   };
