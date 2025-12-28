@@ -4,4 +4,14 @@
   programs.zsh.enable = true;
   system.stateVersion = 5;
   nixpkgs.hostPlatform = "aarch64-darwin";
+  nixpkgs.config.allowUnfree = true;
+
+ users.users.yuto = {
+    name = "yuto";
+    home = "/Users/yuto";
+  };
+
+  home-manager.useGlobalPkgs = true;
+  home-manager.useUserPackages = true;
+  home-manager.users.yuto = import ./home.nix;
 }
