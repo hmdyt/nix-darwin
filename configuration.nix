@@ -20,4 +20,14 @@
     enable = true;
     casks = [ "ghostty" "google-chrome" ];
   };
+
+  system.defaults.dock = {
+    orientation = "left";
+    tilesize = 36;
+    autohide = false;
+    show-recents = false;
+    persistent-apps = [
+      "/Applications/Google Chrome.app"
+    ];
+  };
 }
