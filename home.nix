@@ -1,6 +1,8 @@
 { pkgs, ... }: {
   home.packages = with pkgs; [
     claude-code
+    colima
+    docker
   ];
 
   programs.lazygit = {
