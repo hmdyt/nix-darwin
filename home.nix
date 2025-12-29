@@ -5,6 +5,9 @@
     colima
     difit
     docker
+    gh
+    jq
+    wget
   ];
 
   programs.fzf = {

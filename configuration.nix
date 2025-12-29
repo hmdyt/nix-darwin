@@ -26,6 +26,7 @@
       "1password"
       "ghostty"
       "google-chrome"
+      "logi-options+"
       "raycast"
       "visual-studio-code"
     ];
