@@ -24,8 +24,11 @@
     enable = true;
     casks = [
       "1password"
+      "discord"
       "ghostty"
       "google-chrome"
+      "intellij-idea-ce"
+      "karabiner-elements"
       "logi-options+"
       "raycast"
       "visual-studio-code"

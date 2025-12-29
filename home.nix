@@ -2,6 +2,7 @@
 {
   home.packages = with pkgs; [
     claude-code
+    cloudflared
     colima
     difit
     docker
@@ -40,10 +41,22 @@
   programs.zsh = {
     enable = true;
     autosuggestion.enable = true;
+    initContent = ''
+      [[ "$TERM" == "xterm-ghostty" ]] && export TERM=xterm
+    '';
   };
 
   programs.starship = {
     enable = true;
+  };
+
+  programs.ssh = {
+    enable = true;
+    enableDefaultConfig = false;
+    matchBlocks."ssh.yhmd.dev" = {
+      user = "dev";
+      proxyCommand = "cloudflared access ssh --hostname %h";
+    };
   };
 
   home.stateVersion = "24.11";
