@@ -23,6 +23,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "1password"
       "ghostty"
       "google-chrome"
       "raycast"
