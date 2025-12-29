@@ -15,11 +15,17 @@
       nixpkgs,
       home-manager,
     }:
+    let
+      overlay = final: prev: {
+        difit = import ./pkgs/difit.nix { pkgs = final; };
+      };
+    in
     {
       darwinConfigurations."YutonoMacBook-Air" = nix-darwin.lib.darwinSystem {
         modules = [
           ./configuration.nix
           home-manager.darwinModules.home-manager
+          { nixpkgs.overlays = [ overlay ]; }
         ];
       };
 

@@ -3,7 +3,9 @@
   home.packages = with pkgs; [
     claude-code
     colima
+    difit
     docker
+    fzf
   ];
 
   programs.lazygit = {
@@ -20,6 +22,13 @@
   home.sessionPath = [
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   ];
+
+  programs.vscode = {
+    enable = true;
+    extensions = with pkgs.vscode-extensions; [
+      jnoortheen.nix-ide
+    ];
+  };
 
   programs.zsh.enable = true;
 
