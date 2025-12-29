@@ -5,8 +5,12 @@
     colima
     difit
     docker
-    fzf
   ];
+
+  programs.fzf = {
+    enable = true;
+    enableZshIntegration = true;
+  };
 
   programs.lazygit = {
     enable = true;
@@ -25,12 +29,15 @@
 
   programs.vscode = {
     enable = true;
-    extensions = with pkgs.vscode-extensions; [
+    profiles.default.extensions = with pkgs.vscode-extensions; [
       jnoortheen.nix-ide
     ];
   };
 
-  programs.zsh.enable = true;
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+  };
 
   programs.starship = {
     enable = true;
