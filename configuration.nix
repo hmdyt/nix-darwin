@@ -1,13 +1,17 @@
-{ pkgs, ... }: {
+{ pkgs, ... }:
+{
   nix.enable = true;
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
   programs.zsh.enable = true;
   system.stateVersion = 5;
   system.primaryUser = "yuto";
   nixpkgs.hostPlatform = "aarch64-darwin";
   nixpkgs.config.allowUnfree = true;
 
- users.users.yuto = {
+  users.users.yuto = {
     name = "yuto";
     home = "/Users/yuto";
   };
@@ -18,7 +22,12 @@
 
   homebrew = {
     enable = true;
-    casks = [ "ghostty" "google-chrome" "raycast" "visual-studio-code" ];
+    casks = [
+      "ghostty"
+      "google-chrome"
+      "raycast"
+      "visual-studio-code"
+    ];
   };
 
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;

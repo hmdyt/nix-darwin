@@ -8,14 +8,21 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = { self, nix-darwin, nixpkgs, home-manager }: {
-    darwinConfigurations."YutonoMacBook-Air" = nix-darwin.lib.darwinSystem {
-      modules = [
-        ./configuration.nix
-        home-manager.darwinModules.home-manager
-      ];
-    };
+  outputs =
+    {
+      self,
+      nix-darwin,
+      nixpkgs,
+      home-manager,
+    }:
+    {
+      darwinConfigurations."YutonoMacBook-Air" = nix-darwin.lib.darwinSystem {
+        modules = [
+          ./configuration.nix
+          home-manager.darwinModules.home-manager
+        ];
+      };
 
-    formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-rfc-style;
-  };
+      formatter.aarch64-darwin = nixpkgs.legacyPackages.aarch64-darwin.nixfmt-tree;
+    };
 }
