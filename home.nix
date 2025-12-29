@@ -14,5 +14,15 @@
     settings.user.email = "me@hmdyt.dev";
   };
 
+  home.sessionPath = [
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
+  ];
+
+  programs.zsh.enable = true;
+
+  programs.starship = {
+    enable = true;
+  };
+
   home.stateVersion = "24.11";
 }

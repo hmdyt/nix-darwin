@@ -18,8 +18,10 @@
 
   homebrew = {
     enable = true;
-    casks = [ "ghostty" "google-chrome" "raycast" ];
+    casks = [ "ghostty" "google-chrome" "raycast" "visual-studio-code" ];
   };
+
+  system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
 
   system.defaults.finder = {
     AppleShowAllExtensions = true;
