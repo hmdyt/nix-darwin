@@ -31,6 +31,8 @@
     ];
   };
 
+  security.pam.services.sudo_local.touchIdAuth = true;
+
   system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = false;
 
   system.defaults.finder = {
