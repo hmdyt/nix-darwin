@@ -6,6 +6,7 @@
     colima
     difit
     docker
+    ffmpeg
     gh
     jq
     wget
