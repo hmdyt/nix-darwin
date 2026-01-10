@@ -30,6 +30,7 @@
       "intellij-idea-ce"
       "karabiner-elements"
       "logi-options+"
+      "obs"
       "raycast"
       "visual-studio-code"
     ];
@@ -54,4 +55,10 @@
       "/Applications/Google Chrome.app"
     ];
   };
+
+  system.defaults.trackpad = {
+    Clicking = true;  # タップでクリック
+  };
+
+  power.sleep.display = 0;  # ディスプレイを消さない (0 = never)
 }
