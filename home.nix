@@ -9,6 +9,8 @@
     ffmpeg
     gh
     jq
+    k9s
+    kubectl
     wget
   ];
 

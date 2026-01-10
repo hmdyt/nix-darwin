@@ -60,5 +60,5 @@
     Clicking = true;  # タップでクリック
   };
 
-  power.sleep.display = 0;  # ディスプレイを消さない (0 = never)
+  power.sleep.display = "never";
 }
