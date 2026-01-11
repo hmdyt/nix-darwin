@@ -61,4 +61,16 @@
   };
 
   power.sleep.display = "never";
+
+  # NAS mount
+  launchd.daemons.mount-nas = {
+    serviceConfig = {
+      Label = "com.user.mount-nas";
+      ProgramArguments = [
+        "/bin/sh" "-c"
+        "mkdir -p /Volumes/nas && /sbin/mount_nfs -o resvport,soft,bg,rw 192.168.0.10:/mnt/array1/nfs /Volumes/nas"
+      ];
+      RunAtLoad = true;
+    };
+  };
 }
