@@ -23,6 +23,7 @@
   homebrew = {
     enable = true;
     casks = [
+      "orbstack"
       "1password"
       "discord"
       "ghostty"

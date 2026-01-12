@@ -3,8 +3,8 @@
   home.packages = with pkgs; [
     claude-code
     cloudflared
-    colima
     difit
+    direnv
     docker
     ffmpeg
     gh
@@ -31,6 +31,7 @@
   };
 
   home.sessionPath = [
+    "/opt/homebrew/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   ];
 
@@ -46,6 +47,7 @@
     autosuggestion.enable = true;
     initContent = ''
       [[ "$TERM" == "xterm-ghostty" ]] && export TERM=xterm
+      eval "$(direnv hook zsh)"
     '';
   };
 
