@@ -8,6 +8,7 @@
     docker
     ffmpeg
     gh
+    glab
     jq
     k9s
     kubectl
