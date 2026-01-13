@@ -11,6 +11,7 @@
     jq
     k9s
     kubectl
+    lazydocker
     wget
   ];
 
