@@ -24,7 +24,8 @@
     enable = true;
     casks = [
       "orbstack"
-      "1password"
+      "bitwarden"
+      "claude"
       "discord"
       "ghostty"
       "google-chrome"

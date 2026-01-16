@@ -1,6 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
+    bitwarden-cli
     claude-code
     cloudflared
     difit
