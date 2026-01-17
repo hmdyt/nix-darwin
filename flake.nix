@@ -17,6 +17,7 @@
     }:
     let
       overlay = final: prev: {
+        ccusage = import ./pkgs/ccusage.nix { pkgs = final; };
         difit = import ./pkgs/difit.nix { pkgs = final; };
       };
     in
