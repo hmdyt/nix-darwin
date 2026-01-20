@@ -34,6 +34,7 @@
       "logi-options+"
       "obs"
       "raycast"
+      "steam"
       "visual-studio-code"
     ];
   };
