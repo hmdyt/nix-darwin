@@ -35,6 +35,7 @@
   };
 
   home.sessionPath = [
+    "$HOME/.local/bin"
     "/opt/homebrew/bin"
     "/Applications/Visual Studio Code.app/Contents/Resources/app/bin"
   ];
@@ -107,9 +108,16 @@
   programs.ssh = {
     enable = true;
     enableDefaultConfig = false;
-    matchBlocks."ssh.yhmd.dev" = {
-      user = "dev";
-      proxyCommand = "cloudflared access ssh --hostname %h";
+    matchBlocks = {
+      "*" = {
+        extraOptions = {
+          Include = "~/.ssh/config.d/*.conf";
+        };
+      };
+      "ssh.yhmd.dev" = {
+        user = "dev";
+        proxyCommand = "cloudflared access ssh --hostname %h";
+      };
     };
   };
 

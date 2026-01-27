@@ -28,6 +28,7 @@
       "claude"
       "discord"
       "ghostty"
+      "goland"
       "google-chrome"
       "intellij-idea-ce"
       "karabiner-elements"
